@@ -460,3 +460,21 @@ snippet numeric "methods for emulating a numeric type" b
 	def __coerce__(self, other):
 		${25:pass}
 
+snippet /fileheader
+	#!/usr/bin/python
+	""" @package `expand("%")`
+	             ${1:Description}
+	 Created by: `g:snips_author`
+	 Created on: `strftime("%Y/%m/%d")`
+	Modified by: `g:snips_author`
+	Modified on: `strftime("%Y/%m/%d")`
+	    Version: 0.0.0
+	"""
+
+# Functions' header comments
+snippet /-
+	""" ${2:This function}
+	 Parameters: ${3:None.}
+	    Return : ${4:None.}
+	 Called by : ${5:None.}
+	"""

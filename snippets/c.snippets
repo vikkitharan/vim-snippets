@@ -344,3 +344,38 @@ snippet todo
 # This is kind of convenient
 snippet .
 	[${1}]
+
+
+##
+## Comments
+# File header comments
+snippet /fileheader
+	/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+	//         File: `expand("%")`
+	//               ${1:Description}
+	//   Created by: `g:snips_author`
+	//   Created on: `strftime("%Y/%m/%d")`
+	//  Modified by: `g:snips_author`
+	//  Modified on: `strftime("%Y/%m/%d")`
+	//      Version: 0.0.0
+	//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+# Public functions' header comments
+snippet /+
+	/*++++++++++++++++++++++++++++++++ PUBLIC Function +++++++++++++++++++++++++/
+	//     Function: ${1:Function} ()
+	//  Description: ${2:This function}
+	//   Parameters: ${3:None.}
+	//      Return : ${4:None.}
+	//   Called by : ${5:None.}
+	//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+# Private functions' header comments
+snippet /-
+	/*++++++++++++++++++++++++++++++++ PRIVATE Function ++++++++++++++++++++++++/
+	//     Function: ${1:Function} ()
+	//  Description: ${2:This function}
+	//   Parameters: ${3:None.}
+	//      Return : ${4:None.}
+	//   Called by : ${5:None.}
+	//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/

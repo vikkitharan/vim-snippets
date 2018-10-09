@@ -48,3 +48,18 @@ snippet help
 	help: ## Prints help for targets with comments
 		@cat $(MAKEFILE_LIST) | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $\$1, $\$2}'
 	${0}
+
+
+##
+## Comments
+# File header comments
+snippet /fileheader
+	#-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*#
+	#         File: `expand("%")`
+	#               ${1:Description}
+	#   Created by: `g:snips_author`
+	#   Created on: `strftime("%Y/%m/%d")`
+	#  Modified by: `g:snips_author`
+	#  Modified on: `strftime("%Y/%m/%d")`
+	# 		 Version: 0.0.0
+	#-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*#

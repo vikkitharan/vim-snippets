@@ -99,8 +99,28 @@ snippet datetime "YYYY-MM-DD hh:mm" w
 `!v strftime("%Y-%m-%d %H:%M")`
 endsnippet
 
-snippet todo "TODO comment" bw
-`!p snip.rv=get_comment_format()[0]` ${2:TODO}: $0${3: <${4:`!v strftime('%d-%m-%y')`}${5:, `!v g:snips_author`}>} `!p snip.rv=get_comment_format()[2]`
+snippet todo "todo comment" bw
+`!p snip.rv=get_comment_format()[0]` TODO [`!v g:snips_author` @`!v strftime('%y/%m/%d')`]: ${1:todo : No problem, but addtional code needs to be written, usually when you are skipping something}. `!p snip.rv=get_comment_format()[2]`
+endsnippet
+
+snippet bug "bug comment" bw
+`!p snip.rv=get_comment_format()[0]` BUG [`!v g:snips_author` @`!v strftime('%y/%m/%d')`]: ${1:There is a bug here}`!p snip.rv=get_comment_format()[2]`
+endsnippet
+
+snippet fixme "fixme comment" bw
+`!p snip.rv=get_comment_format()[0]` FIXME [`!v g:snips_author` @`!v strftime('%y/%m/%d')`]: ${1:fixme : This works, sort of, but it could be done better. (usually code written in a hurry that needs rewriting)}. `!p snip.rv=get_comment_format()[2]`
+endsnippet
+
+snippet hack "hack comment" bw
+`!p snip.rv=get_comment_format()[0]` HACK [`!v g:snips_author` @`!v strftime('%y/%m/%d')`]: ${1:hack : Not very well written or malformed code to circumvent a problem/bug}. `!p snip.rv=get_comment_format()[2]`
+endsnippet
+
+snippet xxx "XXX comment" bw
+`!p snip.rv=get_comment_format()[0]` XXX: ${1:xxx : Warning about possible pitfalls.}`!p snip.rv=get_comment_format()[2]`
+endsnippet
+
+snippet note "note comment" bw
+`!p snip.rv=get_comment_format()[0]` NOTE: ${1:note: Description of how the code works (when it isn't self evident)}.`!p snip.rv=get_comment_format()[2]`
 endsnippet
 
 ##########

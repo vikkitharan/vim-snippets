@@ -293,3 +293,36 @@ snippet ru
 	unauthorized(${1:param});
 snippet unless
 	(unless=${1:param});
+
+
+##
+## Javadoc
+# class javadoc
+snippet /fileheader
+	/**
+	*        File: `expand("%")`
+	*              ${1:Description}
+	*  @author   : `g:snips_author`
+	*  @since    : `strftime("%Y/%m/%d")`
+	* Modified by: `g:snips_author`
+	* Modified on: `strftime("%Y/%m/%d")`
+	*    @version: 0.0.0
+	*/
+
+# function Javadocs
+snippet /function
+	/**
+	*    Function:   ${1:Function} ()
+	* Description:   ${2:This function}
+	*      @param:   ${3:None.}
+	*    @return :   ${4:None.}
+	*/
+
+# method header comments
+snippet /method
+	/**
+	*      Method:   ${1:Method} ()
+	* Description:   ${2:This method}
+	*      @param:   ${3:None.}
+	*    @return :   ${4:None.}
+	*/
